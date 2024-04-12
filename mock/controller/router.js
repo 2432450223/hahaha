@@ -49,7 +49,7 @@ const data = [
     redirect: 'noRedirect',
     name: 'Vab',
     alwaysShow: true,
-    meta: { title: '组件', icon: 'cloud' },
+    meta: { title: 'nmd组件', icon: 'cloud' },
     children: [
       {
         path: 'permissions',

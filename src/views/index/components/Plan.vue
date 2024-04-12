@@ -3,7 +3,7 @@
     <template #header>
       <vab-icon icon="send-plane-2-line" />
       <!-- 计划 -->
-      <el-tag class="card-header-tag" type="success">祝用框架的小伙伴都能住上别墅，开上保时捷</el-tag>
+      <el-tag class="card-header-tag" type="success">祝小区居民都能住上小别墅</el-tag>
     </template>
     <el-table :data="tableData" height="283px" row-key="title">
       <el-table-column align="center" label="拖拽" width="50px">
@@ -12,8 +12,8 @@
         </template>
       </el-table-column>
       <el-table-column width="20px" />
-      <el-table-column label="目标" prop="title" width="230px" />
-      <el-table-column label="进度" width="220px">
+      <el-table-column label="环境监测" prop="title" width="230px" />
+      <el-table-column label="监测数据" width="220px">
         <template #default="{ row }">
           <el-progress :color="row.color" :percentage="row.percentage" />
         </template>
@@ -31,39 +31,39 @@
       return {
         tableData: [
           {
-            title: '帮助中小企业盈利1个亿',
-            endTIme: '2099-12-31',
-            percentage: 50,
+            title: 'PM2.5',
+            endTIme: '2024-4-07-8:00',
+            percentage: 2.5,
             color: '#95de64',
           },
           {
-            title: '帮助10万个人',
-            endTIme: '2029-12-31',
-            percentage: 8,
+            title: 'CO2',
+            endTIme: '2024-4-08-8:00',
+            percentage: 21,
             color: '#69c0ff',
           },
           {
-            title: '交个帅气的男朋友',
-            endTIme: '2021-12-31',
-            percentage: 76,
+            title: 'TVOC',
+            endTIme: '2024-4-08-8:00',
+            percentage: 20,
             color: '#1890FF',
           },
           {
-            title: 'vue-admin-beautiful标星过1K',
-            endTIme: '2020-03-31',
-            percentage: 100,
+            title: '湿度',
+            endTIme: '2024-4-09-8:00',
+            percentage: 79,
             color: '#ffc069',
           },
           {
-            title: '活到老，学到老',
-            endTIme: '2094-12-16',
+            title: '温度',
+            endTIme: '2024-4-09-8:01',
             percentage: 25,
             color: '#5cdbd3',
           },
           {
-            title: '变成像尤雨溪一样优秀的人',
-            endTIme: '此生无望',
-            percentage: 1,
+            title: '噪音',
+            endTIme: '2024-4-09-8:01',
+            percentage: 33,
             color: '#b37feb',
           },
         ],

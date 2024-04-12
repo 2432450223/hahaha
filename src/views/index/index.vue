@@ -17,7 +17,7 @@
       <el-col :lg="6" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="never">
           <div slot="header">
-            <span>访问量</span>
+            <span>小区访问量</span>
           </div>
           <vab-chart autoresize :option="fwl" />
           <div class="bottom">
@@ -61,30 +61,30 @@
           </div>
           <div class="bottom-btn">
             <el-popover placement="top" trigger="hover" width="250">
-              <p>
+              <!-- <p>
                 请我们喝杯咖啡，付款后联系qq
                 783963206，我们将邀请您加入我们的讨论群，谢谢您愿意支持开源，加群获取文档、及基础模板，群内大佬众多，希望能帮到大家（如情况不允许，请勿勉强）。
-              </p>
-              <el-image :src="require('@/assets/zfb_kf.jpg')" />
+              </p> -->
+              <!-- <el-image :src="require('@/assets/zfb_kf.jpg')" /> -->
               <a slot="reference" target="_blank">
-                <el-button type="primary">QQ讨论群、基础版、文档</el-button>
+                <el-button type="primary">小区智慧互联</el-button>
               </a>
             </el-popover>
             <a href="https://github.com/chuzhixin/vue-admin-better" target="_blank">
-              <el-button type="warning">vue2.x版本 github下载源码点star</el-button>
+              <el-button type="warning">传感器的应用</el-button>
             </a>
             <a href="https://gitee.com/chu1204505056/vue-admin-beautiful" target="_blank">
-              <el-button type="warning">vue2.x版本 码云下载源码点star</el-button>
+              <el-button type="warning">环境监测</el-button>
             </a>
             <a href="https://github.com/chuzhixin/vue-admin-arco" target="_blank">
-              <el-button type="warning">vue3.x版本 github下载源码点star</el-button>
+              <el-button type="warning">设施检测</el-button>
             </a>
             <a @click="handleChangeTheme">
-              <el-button type="danger">修改主题和布局</el-button>
+              <el-button type="danger">安全报警</el-button>
             </a>
           </div>
           <table class="table">
-            <tr>
+            <!-- <tr>
               <td>@vue/cli版本</td>
               <td>{{ devDependencies['@vue/cli-service'] }}</td>
               <td>vue版本</td>
@@ -119,7 +119,7 @@
               <td>{{ dependencies['layouts'] }}</td>
               <td>lodash版本</td>
               <td>{{ dependencies['lodash'] }}</td>
-            </tr>
+            </tr> -->
           </table>
         </el-card>
 
@@ -129,7 +129,7 @@
           </div>
           <div style="text-align: center">
             <vab-colorful-icon icon-class="vab" style="font-size: 140px" />
-            <h1 style="font-size: 30px">vue-admin-better</h1>
+            <h1 style="font-size: 30px">小区智慧互联</h1>
           </div>
           <div v-for="(item, index) in noticeList" :key="index">
             <el-alert v-if="index !== 0" :closable="item.closable" :title="item.title" :type="item.type" />
@@ -411,7 +411,7 @@
         reverse: true,
         activities: [],
         noticeList: [],
-        //其他信息
+        // //其他信息
         userAgent: navigator.userAgent,
         //卡片图标
         iconList: [
@@ -516,6 +516,7 @@
       },
       async fetchData() {
         const { data } = await getList()
+        // const { data } = {"code":200,"msg":"","data":[{"_id":"60fd6dbecd84d60001f99f33","content":"在github上获得了第一个star，感恩一位名叫Bequiet2014的github用户。","timestamp":"2020-03-23"},{"_id":"60fd6defcd84d60001f9a039","content":"品牌升级：付费版vue2.x品牌升级为Admin Pro，付费版vue3.x品牌名升级为Admin Plus。","timestamp":"最近更新"},{"_id":"610978795c2db80001a09dc5","content":"团结一心，共抗疫情，烟台加油！！","timestamp":"最近更新"},{"_id":"6117518b7c33d50001d1ab10","content":"七夕当天github标星破万，感恩有你，愿你有人疼有人爱，开心度过每一天。","timestamp":"最近更新"},{"_id":"612e2ecb1b51d10001b8f1ad","content":"没有老师就没有vab的今天，提前预祝所有老师教师节快乐，预祝所有用户中秋快乐。","timestamp":"最近更新"},{"_id":"61b6e72cd00c060001339c27","content":"忘记历史就意味着背叛，否认罪责就意味着重犯。一切罔顾侵略战争历史的态度，一切美化侵略战争性质的言论，不论说了多少遍，不论说得多么冠冕堂皇，都是对人类和平和正义的侵害。对这些错误言行，爱好和平与正义的人们必须高度警惕、坚决反对。","timestamp":"南京大屠杀公祭日"},{"_id":"61c4752c39bf1000016e4439","content":"冬已至，春不远！众志成城，攻坚克难！愿长安，长长安！西安加油！","timestamp":"最近更新"},{"_id":"621ce37f3da49e0001b419b1","content":"没有人是为了战争而生，也不该又有人因为疫病而死，愿世间重归和平，愿病毒早日驱散。","timestamp":"最近更新"},{"_id":"6252ef47eb124700019b4977","content":"全民抗疫，众志成城，共克时艰，广州加油！中国加油！","timestamp":"最近更新"},{"_id":"63874f37ce2777000176d727","content":"沉痛缅怀，深切哀悼，伟人千古！","timestamp":"2022-11-30"},{"_id":"646f759b09e2989198390163","content":"身处裁员潮中的我见证了太多的无可奈何，我不评论公司选择人才的标准，只希望大家振作起来，争取体面的活着，加油！","timestamp":"2023-05-25"},{"_id":"648079730c801c6b97f35577","content":"高考不是终点，人生的路还很漫长，努力去活成自己喜欢的样子，致敬这必死无疑的一生！","timestamp":"2023-06-07"},{"_id":"64e826b86e5d2d8f64e1bb3a","content":"历史不会忘记，2023年8月24日，日本不顾全人类生命安全与世界关切公然将核污水排海！","timestamp":"2023-08-24"}]}
         data.map((item, index) => {
           if (index === data.length - 1) {
             item.color = '#0bbd87'

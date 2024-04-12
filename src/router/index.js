@@ -77,7 +77,7 @@ export const asyncRoutes = [
     redirect: 'noRedirect',
     name: 'Vab',
     alwaysShow: true,
-    meta: { title: '组件', icon: 'box-open' },
+    meta: { title: 'nmd组件', icon: 'box-open' },
     children: [
       {
         path: 'permissions',

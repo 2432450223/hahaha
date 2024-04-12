@@ -16,7 +16,7 @@
     name: 'VabLogo',
     data() {
       return {
-        title: this.$baseTitle,
+        title: '智慧社区管理',
       }
     },
     computed: {
